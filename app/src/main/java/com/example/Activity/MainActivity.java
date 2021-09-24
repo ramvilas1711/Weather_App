@@ -17,12 +17,9 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                startActivity(new Intent(MainActivity.this,Register.class));
-                finish();
-            }
+        new Handler().postDelayed(() -> {
+            startActivity(new Intent(MainActivity.this,Register.class));
+            finish();
         },2000);
     }
 }
