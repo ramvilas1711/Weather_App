@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register"
+    android:background="@color/background"
+    android:id="@+id/registerLayoutID"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_actionbar"
+        android:background="@null"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:fitsSystemWindows="true" />
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/setScreenLayout"
+       android:layout_below="@id/toolbar_actionbar">
+
+       <EditText
+           android:id="@+id/mobileNumber"
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:layout_marginStart="30dp"
+           android:layout_marginTop="30dp"
+           android:layout_marginEnd="30dp"
+           android:layout_marginBottom="30dp"
+           android:background="@color/white"
+           android:hint="@string/mobile_number"
+           android:inputType="number"
+           android:paddingLeft="20dp" />
+
+       <EditText
+           android:id="@+id/FullName"
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:layout_below="@id/mobileNumber"
+           android:layout_marginHorizontal="30dp"
+           android:background="@color/white"
+           android:hint="@string/full_name"
+           android:paddingLeft="20dp" />
+
+       <Spinner
+           android:id="@+id/genderID"
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:layout_below="@id/FullName"
+           android:layout_marginHorizontal="30dp"
+           android:layout_marginTop="5dp"
+           android:background="@color/white"
+           android:hint="@string/gender"
+           android:paddingLeft="20dp" />
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:layout_marginHorizontal="30dp"
+           android:layout_marginTop="5dp"
+           android:id="@+id/dOBID"
+           android:layout_below="@id/genderID"
+           android:background="@color/white"
+           android:orientation="horizontal">
+
+           <EditText
+               android:layout_width="300dp"
+               android:layout_height="50dp"
+               android:background="@color/white"
+               android:id="@+id/dateOfBirthID"
+               android:hint="@string/dob"
+               android:paddingLeft="20dp"/>
+
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/calenderIconID"
+               android:src="@drawable/calendar_today"
+               android:layout_marginHorizontal="5dp"
+               android:layout_marginTop="10dp"/>
+
+       </LinearLayout>
+
+       <EditText
+           android:id="@+id/addressLine1"
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:layout_below="@id/dOBID"
+           android:layout_marginHorizontal="30dp"
+           android:layout_marginTop="15dp"
+           android:background="@color/white"
+           android:hint="@string/address_line_1"
+           android:paddingLeft="20dp" />
+
+       <EditText
+           android:id="@+id/addressLine2"
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:layout_below="@id/addressLine1"
+           android:layout_marginHorizontal="30dp"
+           android:layout_marginTop="5dp"
+           android:background="@color/white"
+           android:hint="@string/address_line_2"
+           android:paddingLeft="20dp" />
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:layout_marginHorizontal="30dp"
+           android:layout_marginTop="5dp"
+           android:id="@+id/pin"
+           android:layout_below="@id/addressLine2"
+           android:background="#D9D9D9"
+           android:orientation="horizontal">
+
+           <EditText
+               android:layout_width="170dp"
+               android:layout_height="50dp"
+               android:background="@color/white"
+               android:id="@+id/pinCodeID"
+               android:inputType="number"
+               android:maxLength="6"
+               android:paddingLeft="20dp"
+               android:hint="@string/pin_code" />
+
+           <Button
+               android:layout_width="170dp"
+               android:layout_height="50dp"
+               android:layout_marginLeft="10dp"
+               android:background="#cccccc"
+               android:id="@+id/pinCodeCheckID"
+               android:enabled="false"
+               android:text="@string/check" />
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/district"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/pin"
+           android:layout_marginTop="10dp"
+           android:orientation="horizontal">
+
+           <TextView
+               android:id="@+id/districtID"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@id/pin"
+               android:layout_marginLeft="30dp"
+               android:text="District :"
+               android:textColor="@color/black"
+               android:textSize="15sp" />
+
+           <TextView
+               android:id="@+id/DistrictValueID"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="100dp"
+               android:text=""
+               android:textColor="@color/black"
+               android:textSize="15sp" />
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/stateLayoutID"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/district"
+           android:layout_marginTop="5dp"
+           android:orientation="horizontal">
+
+           <TextView
+               android:id="@+id/stateID"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@id/districtID"
+               android:layout_marginLeft="30dp"
+               android:text="State :"
+               android:textColor="@color/black"
+               android:textSize="15sp" />
+
+           <TextView
+               android:id="@+id/StateValueID"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="100dp"
+               android:text=""
+               android:textColor="@color/black"
+               android:textSize="15sp" />
+
+       </LinearLayout>
+
+       <Button
+           android:id="@+id/registerID"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/stateLayoutID"
+           android:layout_marginHorizontal="30dp"
+           android:layout_marginStart="20dp"
+           android:layout_marginTop="20dp"
+           android:layout_marginEnd="20dp"
+           android:layout_marginBottom="20dp"
+           android:background="#CCCCCC"
+           android:text="Register" />
+   </RelativeLayout>
+
+</RelativeLayout>

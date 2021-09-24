@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Weather App</string>
+    <string name="pin_code">Pin Code *</string>
+    <string name="check">Check</string>
+    <string name="address_line_2">Address Line 2</string>
+    <string name="address_line_1">Address Line 1 *</string>
+    <string name="dob">DOB *</string>
+    <string name="gender">Gender *</string>
+    <string name="full_name">Full Name *</string>
+    <string name="mobile_number">Mobile Number *</string>
+    <string name="city_name">City name</string>
+    <string name="temperature_in_fahrenheit">Temperature in Fahrenheit:</string>
+    <string name="latitude">Latitude:</string>
+    <string name="longitude">Longitude:</string>
+    <string name="temperature_in_centrigrade">Temperature in Centrigrade:</string>
+    <string name="show_result">Show Result</string>
+    <string name="mobileNumber">Enter 10 Digit Mobile Number</string>
+    <string name="userName">Enter in 50 character</string>
+    <string name="address">Minimum 3 and maximum 50 character</string>
+    <string name="address2">Enter 50 character</string>
+    <string name="pinCode">Enter 6 digit pin code</string>
+    <string name="welcome_to_weather_app">Welcome to Weather App</string>
+
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+</resources>
